@@ -7,6 +7,8 @@ import { LayoutComponent } from './layout/layout.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { FormsModule} from '@angular/forms';
+import { CourseComponent } from './course/components/course/course.component';
+import { CourseContainerComponent } from './course/components/course-container/course-container.component';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { FormsModule} from '@angular/forms';
     AppComponent,
     LayoutComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CourseComponent,
+    CourseContainerComponent
   ],
   imports: [
     BrowserModule,
