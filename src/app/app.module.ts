@@ -9,6 +9,9 @@ import { ContactComponent } from './modules/contact/contact.component';
 import { CourseComponent } from './modules/course/course.component';
 import { HomeComponent } from './modules/home/home.component';
 import { SubscriptionComponent } from './modules/subscription/subscription.component';
+import { LayoutComponent } from './layout/layout.component';
+import { HeaderComponent } from './layout/header/header.component';
+import { FooterComponent } from './layout/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { SubscriptionComponent } from './modules/subscription/subscription.compo
     ContactComponent,
     CourseComponent,
     HomeComponent,
-    SubscriptionComponent
+    SubscriptionComponent,
+    LayoutComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
