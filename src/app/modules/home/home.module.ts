@@ -8,7 +8,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { InstructorComponent } from './components/instructor/instructor.component';
 import { InstructorContainerComponent } from './components/instructor-container/instructor-container.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-
+import { InstructorService } from './services/instructor.service';
+import { CursodestacadoService } from './services/cursodestacado.service';
 
 @NgModule({
   declarations: [HomePageComponent, CourseDestacadoContainerComponent, HeaderComponent, InstructorComponent, InstructorContainerComponent],
@@ -16,6 +17,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
     CommonModule,
     HomeRoutingModule,
     SharedModule,
-  ]
+  ],
+  providers:[InstructorService, CursodestacadoService]
 })
 export class HomeModule { }

@@ -1,1 +1,8 @@
-<app-sharedcourse ICurso[curso]="listarCursoDestacado" [coverWidth]=200></app-sharedcourse>
+<span class="border">
+    <div style="text-align: center;">
+        <h1 class="display-3">CURSOS DESTACADOS</h1>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-2">
+        <app-sharedcourse *ngFor="let item of listarCurso" [curso]="item"></app-sharedcourse>
+    </div>
+</span>

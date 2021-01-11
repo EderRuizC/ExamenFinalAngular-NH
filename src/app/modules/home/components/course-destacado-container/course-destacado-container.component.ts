@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ICurso } from '../../../../shared/Interfaces/Course';
+import { CursodestacadoService } from '../../services/cursodestacado.service';
 
 @Component({
   selector: 'app-course-destacado-container',
@@ -8,23 +9,21 @@ import { ICurso } from '../../../../shared/Interfaces/Course';
 })
 export class CourseDestacadoContainerComponent implements OnInit {
 
-  listarCursoDestacado: ICurso[] = [{id: 1,
-    name: 'Angular 10',
-    featured: true,
-    image: 'http://examen-nh.jcramireztello.com/media/books/angular10.png',
-    language: 'es',
-    price: 5000.0,
-    duration: 40,
-    lessons: 7,
-    deadline: '2021-01-09',
-    students: 20,
-    summary: 'Angular es el framework para JavaScript estándapulares para dilarJS. Ahora utilizaremos TypeScel framework.',
-    instructor: 1,
-    category: 2}];
+  listarCurso: ICurso[] = [];
 
-  constructor() { }
+  constructor(private cursodestservicio: CursodestacadoService ) { 
+  }
 
   ngOnInit(): void {
+    this.getinstructor();
+  }
+
+  getinstructor() {
+    this.cursodestservicio.getinstructor()
+      .subscribe((res: ICurso[]) => {
+        this.listarCurso = res;
+      }
+      );
   }
 
 }

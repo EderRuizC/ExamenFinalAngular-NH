@@ -8,14 +8,10 @@ import { ICurso } from '../../Interfaces/Course';
 })
 export class CourseComponent implements OnInit {
 
-  @Input() curso = {};
-  @Input() coverWidth: number = 1;
+  @Input()
+  curso!: ICurso;
+ 
+  constructor() { }
 
-  constructor() { 
-  }
-
-  ngOnInit(): void {
-  
-  };
-
+  ngOnInit(): void {};
 }
