@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ICurso } from '../../Interfaces/Course';
 
 @Component({
   selector: 'app-sharedcourse',
@@ -7,12 +8,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CourseComponent implements OnInit {
 
-  @Input() curso: any[] = [];
+  @Input() curso = {};
   @Input() coverWidth: number = 1;
 
-  constructor() { }
+  constructor() { 
+  }
 
   ngOnInit(): void {
-  }
+  
+  };
 
 }

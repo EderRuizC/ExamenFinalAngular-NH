@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ICurso } from '../../../../shared/Interfaces/Course';
 
 @Component({
   selector: 'app-course-container',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./course-container.component.scss']
 })
 export class CourseContainerComponent implements OnInit {
+  
+  listarCurso = [];
 
-  listarCurso: any[] = [];
+  constructor() { 
 
-  constructor() { }
+  }
 
   ngOnInit(): void {
   }
